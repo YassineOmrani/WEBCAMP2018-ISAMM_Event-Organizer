@@ -1,0 +1,33 @@
+label{
+    font-size: 20px;
+    font-family: helvetica;
+    padding-top: 15px;
+    color:white;
+}
+#f1{
+    background-color: rgba(69, 69, 69, 68);
+    opacity: 0.7;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+#f1:hover{
+    opacity:1;
+}
+#mrg{
+    margin: auto;
+}
+#bgc{
+    background: url(http://www.drvevents.com/wp-content/uploads/2017/01/convention_conad_free_event_12.jpg);
+    background-size: cover;
+}
+#titre{
+    color: white;
+    font-size: 28px;
+}
+hr{
+    width: 20px;
+}

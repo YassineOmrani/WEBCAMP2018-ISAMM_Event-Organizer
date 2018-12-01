@@ -1,0 +1,84 @@
+<html>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7" id="div1">
+                <div class="row register-form" >
+                    <div class="col-md-8 col-md-offset-2">
+                        <form class="form-horizontal custom-form" [formGroup]="formData" (ngSubmit)="onSubmit()">
+                            <h4 *ngIf="!success && submitted" class="alert alert-danger">Invalid Sign up form</h4>
+                            <h1 class="text-uppercase text-center" id="su">Sign Up</h1>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="control-label" for="name-input-field">Name </label>
+                                </div>
+                                <div class="col-sm-10 input-column">
+                                    <input class="form-control" type="text" formControlName="name">
+                                </div>
+                            </div>
+                            <div *ngIf="submitted && formData.controls.name.errors" class="error">
+                                    <div *ngIf="formData.controls.name.errors.required">A name is required</div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="control-label" for="email-input-field" >Email </label>
+                                </div>
+                                <div class="col-sm-10 input-column">
+                                    <input class="form-control" type="email" formControlName="email">
+                                </div>
+                            </div>
+                            <div *ngIf="submitted && formData.controls.email.errors" class="error">
+                                 <div *ngIf="formData.controls.email.errors.required">An email is required</div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="control-label" for="pawssword-input-field" >Password </label>
+                                </div>
+                                <div class="col-sm-10 input-column">
+                                    <input class="form-control" type="password" formControlName="password">
+                                </div>
+                            </div>
+                            <div *ngIf="submitted && formData.controls.password.errors" class="error">
+                                    <div *ngIf="formData.controls.password.errors.required">A password is required</div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="control-label" for="repeat-pawssword-input-field">confirm Password </label>
+                                </div>
+                                
+                                <div class="col-sm-10 input-column">
+                                    <input class="form-control" type="password" formControlName="cpassword">
+                                </div>
+                                <div *ngIf="formData.controls.password.value != formData.controls.cpassword.value" class="error">
+                                        <div *ngIf="formData.controls.cpassword.errors.required">confirm password must match password</div>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">I've read and accept the terms and conditions</label>
+                            </div>
+                            <input type="submit" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-offset-1" id="div2">
+                <div class="login-card" id="f2">
+                    <h1 class="text-uppercase text-center">Login</h1>
+                    <form class="form-signin"><span class="reauth-email"  > </span>
+                        <input class="form-control" type="email" required="" placeholder="Email address" autofocus="" id="inputEmail">
+                        <input class="form-control" type="password" required="" placeholder="Password" id="inputPassword">
+                        <div class="checkbox">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">Remember me</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit">Sign in</button>
+                    </form><a href="#" class="forgot-password">Forgot your password?</a></div>
+            </div>
+        </div>
+    </div>
+    </body>
+   
+    </html>

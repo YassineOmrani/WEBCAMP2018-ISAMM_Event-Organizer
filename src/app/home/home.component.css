@@ -1,0 +1,29 @@
+.col-md-8{
+    margin: auto;
+}
+.container-fluid{
+    margin-top: 0px;
+}
+
+#su{
+    font-size: 40px;
+    font-family: helvetica;
+}
+body{
+    background: url("http://www.drvevents.com/wp-content/uploads/2017/01/convention_conad_free_event_12.jpg");
+    background: contain;
+    height: 100%; 
+}
+body,html{
+    height:100%;
+}
+form{
+    border-radius:15px;
+    opacity: 0.7;
+}
+form:hover{
+    opacity: 1;
+}
+#f2{
+    border-radius:15px;
+}
